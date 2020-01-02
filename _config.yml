@@ -23,12 +23,12 @@ SEOTitle: toboto的博客
 email: tobotorui@qq.com
 description: "Every failure is leading towards success."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://toboto.wang" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://toboto.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  toboto
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
