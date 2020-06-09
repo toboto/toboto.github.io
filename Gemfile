@@ -31,3 +31,5 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem 'faraday', '~> 0'
 gem 'html-proofer'
 gem 'rubocop'
+gem "activesupport", ">= 6.0.3.1"
+gem "nokogiri", ">= 1.10.8"
