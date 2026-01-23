@@ -68,7 +68,7 @@ EOF
 
 ```bash
 # 查看 uv 配置
-uv pip config list
+uv pip list
 
 # 测试安装包（应该从阿里云下载）
 uv pip install --dry-run requests
@@ -88,6 +88,14 @@ mv uv-x86_64-unknown-linux-gnu/uvx ~/.local/bin/
 export PATH="$HOME/.local/bin:$PATH"
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 
+# 解压到 uv 的 python 目录
+mkdir -p ~/.local/share/uv/python
+tar -xzf cpython-3.11.14+20251209-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz \
+    -C ~/.local/share/uv/python
+
+# 重命名为 uv 识别的格式
+mv ~/.local/share/uv/python/python \
+   ~/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu
 # 配置阿里云镜像
 mkdir -p ~/.config/uv
 cat > ~/.config/uv/uv.toml << 'EOF'
